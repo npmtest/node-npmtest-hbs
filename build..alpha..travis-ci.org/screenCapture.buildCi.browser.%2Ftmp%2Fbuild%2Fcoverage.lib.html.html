@@ -1,7 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Code coverage report for node-npmtest-hbs/hbs/lib/async.js</title>
+<html lang="en"><head>
+    <title>Code coverage report for node-npmtest-hbs/node_modules/hbs/lib/async.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -194,7 +192,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-hbs">npmtest-hbs (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-hbs/hbs/lib/async.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-hbs/node_modules/hbs/lib/async.js</span></h1>
     <h2>
         
         Statements: <span class="metric">14.29% <small>(7 / 49)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-hbs/hbs/lib/</a> &#187; async.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-hbs/node_modules/hbs/lib/</a> » async.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -434,118 +432,119 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/// provides the async helper functionality
 &nbsp;
-<span class="fstat-no" title="function not covered" >function Waiter() {</span>
-<span class="cstat-no" title="statement not covered" >    if (!(this instanceof Waiter)) {</span>
-<span class="cstat-no" title="statement not covered" >        return new Waiter();</span>
+<span class="fstat-no" title="function not covered">function Waiter() {</span>
+<span class="cstat-no" title="statement not covered">    if (!(this instanceof Waiter)) {</span>
+<span class="cstat-no" title="statement not covered">        return new Waiter();</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
 &nbsp;
     // found values
-<span class="cstat-no" title="statement not covered" >    self.values = {};</span>
+<span class="cstat-no" title="statement not covered">    self.values = {};</span>
 &nbsp;
     // callback when done
-<span class="cstat-no" title="statement not covered" >    self.callback = null;</span>
+<span class="cstat-no" title="statement not covered">    self.callback = null;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    self.resolved = false;</span>
+<span class="cstat-no" title="statement not covered">    self.resolved = false;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    self.count = 0;</span>
+<span class="cstat-no" title="statement not covered">    self.count = 0;</span>
 };
 &nbsp;
-Waiter.prototype.wait = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
-<span class="cstat-no" title="statement not covered" >    ++self.count;</span>
+Waiter.prototype.wait = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
+<span class="cstat-no" title="statement not covered">    ++self.count;</span>
 };
 &nbsp;
 // resolve the promise
-Waiter.prototype.resolve = <span class="fstat-no" title="function not covered" >function(name, val) {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+Waiter.prototype.resolve = <span class="fstat-no" title="function not covered">function(name, val) {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    self.values[name] = val;</span>
+<span class="cstat-no" title="statement not covered">    self.values[name] = val;</span>
 &nbsp;
     // done with all items
-<span class="cstat-no" title="statement not covered" >    if (--self.count === 0) {</span>
-<span class="cstat-no" title="statement not covered" >        self.resolved = true;</span>
+<span class="cstat-no" title="statement not covered">    if (--self.count === 0) {</span>
+<span class="cstat-no" title="statement not covered">        self.resolved = true;</span>
 &nbsp;
         // we may not have a done callback yet
-<span class="cstat-no" title="statement not covered" >        if (self.callback) {</span>
-<span class="cstat-no" title="statement not covered" >            self.callback(self.values);</span>
+<span class="cstat-no" title="statement not covered">        if (self.callback) {</span>
+<span class="cstat-no" title="statement not covered">            self.callback(self.values);</span>
         }
     }
 };
 &nbsp;
 // sets the done callback for the waiter
 // notifies when the promise is complete
-Waiter.prototype.done = <span class="fstat-no" title="function not covered" >function(fn) {</span>
-<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+Waiter.prototype.done = <span class="fstat-no" title="function not covered">function(fn) {</span>
+<span class="cstat-no" title="statement not covered">    var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    self.callback = fn;</span>
-<span class="cstat-no" title="statement not covered" >    if (self.resolved) {</span>
-<span class="cstat-no" title="statement not covered" >        fn(self.values);</span>
+<span class="cstat-no" title="statement not covered">    self.callback = fn;</span>
+<span class="cstat-no" title="statement not covered">    if (self.resolved) {</span>
+<span class="cstat-no" title="statement not covered">        fn(self.values);</span>
     }
 };
 &nbsp;
 var alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz_';
 &nbsp;
-var gen_id = <span class="fstat-no" title="function not covered" >function() {</span>
-<span class="cstat-no" title="statement not covered" >    var res = '';</span>
-<span class="cstat-no" title="statement not covered" >    for (var i=0 ; i&lt;8 ; ++i) {</span>
-<span class="cstat-no" title="statement not covered" >        res += alphabet[Math.floor(Math.random() * alphabet.length)];</span>
+var gen_id = <span class="fstat-no" title="function not covered">function() {</span>
+<span class="cstat-no" title="statement not covered">    var res = '';</span>
+<span class="cstat-no" title="statement not covered">    for (var i=0 ; i&lt;8 ; ++i) {</span>
+<span class="cstat-no" title="statement not covered">        res += alphabet[Math.floor(Math.random() * alphabet.length)];</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return res;</span>
+<span class="cstat-no" title="statement not covered">    return res;</span>
 };
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered" >function() {</span>
+module.exports = <span class="fstat-no" title="function not covered">function() {</span>
     // baton which contains the current
     // set of deferreds
-<span class="cstat-no" title="statement not covered" >    var waiter;</span>
+<span class="cstat-no" title="statement not covered">    var waiter;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    var obj = Object.create(null);</span>
-<span class="cstat-no" title="statement not covered" >    obj.done = <span class="fstat-no" title="function not covered" >function done(fn) {</span></span>
+<span class="cstat-no" title="statement not covered">    var obj = Object.create(null);</span>
+<span class="cstat-no" title="statement not covered">    obj.done = <span class="fstat-no" title="function not covered">function done(fn) {</span></span>
         // no async things called
-<span class="cstat-no" title="statement not covered" >        if (!waiter) {</span>
-<span class="cstat-no" title="statement not covered" >            return fn({});</span>
+<span class="cstat-no" title="statement not covered">        if (!waiter) {</span>
+<span class="cstat-no" title="statement not covered">            return fn({});</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        waiter.done(fn);</span>
+<span class="cstat-no" title="statement not covered">        waiter.done(fn);</span>
 &nbsp;
         // clear the waiter for the next template
-<span class="cstat-no" title="statement not covered" >        waiter = undefined;</span>
+<span class="cstat-no" title="statement not covered">        waiter = undefined;</span>
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    obj.resolve = <span class="fstat-no" title="function not covered" >function resolve(fn, args) {</span></span>
+<span class="cstat-no" title="statement not covered">    obj.resolve = <span class="fstat-no" title="function not covered">function resolve(fn, args) {</span></span>
         // we want to do async things, need a waiter for that
-<span class="cstat-no" title="statement not covered" >        if (!waiter) {</span>
-<span class="cstat-no" title="statement not covered" >            waiter = new Waiter();</span>
+<span class="cstat-no" title="statement not covered">        if (!waiter) {</span>
+<span class="cstat-no" title="statement not covered">            waiter = new Waiter();</span>
         }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var id = '__' + gen_id() + '__';</span>
+<span class="cstat-no" title="statement not covered">        var id = '__' + gen_id() + '__';</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        var cur_waiter = waiter;</span>
-<span class="cstat-no" title="statement not covered" >        waiter.wait();</span>
+<span class="cstat-no" title="statement not covered">        var cur_waiter = waiter;</span>
+<span class="cstat-no" title="statement not covered">        waiter.wait();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        args = [].slice.call(args);</span>
-<span class="cstat-no" title="statement not covered" >        args.push(<span class="fstat-no" title="function not covered" >function(res) {</span></span>
-<span class="cstat-no" title="statement not covered" >            cur_waiter.resolve(id, res);</span>
+<span class="cstat-no" title="statement not covered">        args = [].slice.call(args);</span>
+<span class="cstat-no" title="statement not covered">        args.push(<span class="fstat-no" title="function not covered">function(res) {</span></span>
+<span class="cstat-no" title="statement not covered">            cur_waiter.resolve(id, res);</span>
         })
         
-<span class="cstat-no" title="statement not covered" >        fn.apply(null, args);</span>
+<span class="cstat-no" title="statement not covered">        fn.apply(null, args);</span>
 &nbsp;
         // return the id placeholder
         // this will be replaced later
-<span class="cstat-no" title="statement not covered" >        return id;</span>
+<span class="cstat-no" title="statement not covered">        return id;</span>
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    return obj;</span>
+<span class="cstat-no" title="statement not covered">    return obj;</span>
 };
 &nbsp;
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 15:17:27 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 21:47:40 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
